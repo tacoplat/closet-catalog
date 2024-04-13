@@ -1,0 +1,43 @@
+@import "src/styles/tokens";
+
+.card {
+  flex-shrink: 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    .cardContent {
+      max-width: 15rem;
+    }
+
+    .pieceTitle {
+      max-height: 78px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      @supports (-webkit-line-clamp: 2) {
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .cardContent {
+      width: 100%;
+      display: flex;
+
+      img {
+        flex-shrink: 0;
+        width: 60%;
+        height: auto;
+        aspect-ratio: 1;
+      }
+    }
+  }
+}

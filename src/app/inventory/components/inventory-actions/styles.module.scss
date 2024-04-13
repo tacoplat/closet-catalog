@@ -1,0 +1,12 @@
+@import "src/styles/tokens.scss";
+
+.inventoryActions {
+  display: flex;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    position: fixed;
+    top: 2.4rem;
+    right: 2.4rem;
+  }
+}
